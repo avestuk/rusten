@@ -21,7 +21,10 @@ fn main() {
     let is_celsius = match temperature_type.as_str() {
         "C" => true,
         "F" => false,
-        _ => panic!("could not match temperature type to F or C"),
+        _ => panic!(
+            "could not match temperature type {} to F or C",
+            temperature_type
+        ),
     };
     println!("is_celsius: {}", is_celsius);
 
