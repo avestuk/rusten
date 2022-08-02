@@ -1,0 +1,122 @@
+
+
+
+x  S           *@<Esc><Cmd>lua require'nvim-surround'.visual_surround()<CR>
+	Last set from Lua
+o  [[          *@:call rust#Jump('o', 'Back')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/ftplugin/rust.vim line 111
+x  [[          *@:call rust#Jump('v', 'Back')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/ftplugin/rust.vim line 109
+n  [[          *@:call rust#Jump('n', 'Back')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/ftplugin/rust.vim line 107
+o  ]]          *@:call rust#Jump('o', 'Forward')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/ftplugin/rust.vim line 112
+x  ]]          *@:call rust#Jump('v', 'Forward')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/ftplugin/rust.vim line 110
+n  ]]          *@:call rust#Jump('n', 'Forward')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/ftplugin/rust.vim line 108
+n  cs          *@<Lua function 22>
+	Last set from Lua
+n  ds          *@<Lua function 55>
+	Last set from Lua
+n  yss          @<Lua function 143>
+	Last set from Lua
+n  ys          *@<Lua function 219>
+	Last set from Lua
+n  <D-R>       *@:RustRun! <C-R>=join(b:rust_last_rustc_args)<CR><C-\>erust#AppendCmdLine(' -- ' . join(b:rust_last_args))<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/ftplugin/rust.vim line 142
+n  <D-r>       *@:RustRun<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/ftplugin/rust.vim line 140
+n  <C-L>       * :nohl<CR><C-L>
+	Last set from ~/.vimrc line 155
+o  %             <Plug>(MatchitOperationForward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 73
+x  %             <Plug>(MatchitVisualForward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 71
+n  %             <Plug>(MatchitNormalForward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 69
+n  ,gf         * <Cmd>lua require('telescope.builtin').git_files()<CR>
+	Last set from ~/.config/nvim/init.vim line 25
+n  ,ff         * <Cmd>lua require('telescope.builtin').find_files()<CR>
+	Last set from ~/.config/nvim/init.vim line 24
+n  Y           * y$
+o  [%            <Plug>(MatchitOperationMultiBackward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 81
+x  [%            <Plug>(MatchitVisualMultiBackward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 79
+n  [%            <Plug>(MatchitNormalMultiBackward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 77
+o  ]%            <Plug>(MatchitOperationMultiForward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 82
+x  ]%            <Plug>(MatchitVisualMultiForward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 80
+n  ]%            <Plug>(MatchitNormalMultiForward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 78
+x  a%            <Plug>(MatchitVisualTextObject)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 85
+x  gx            <Plug>NetrwBrowseXVis
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/plugin/netrwPlugin.vim line 88
+n  gx            <Plug>NetrwBrowseX
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/plugin/netrwPlugin.vim line 82
+o  g%            <Plug>(MatchitOperationBackward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 74
+x  g%            <Plug>(MatchitVisualBackward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 72
+n  g%            <Plug>(MatchitNormalBackward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 70
+n  y<C-G>      & :<C-U>call setreg(v:register, fugitive#Object(@%))<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/vim-fugitive/plugin/fugitive.vim line 743
+n  <SNR>51_:   * :<C-U><C-R>=v:count ? v:count : ''<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/vim-fugitive/autoload/fugitive.vim line 7524
+n  <Plug>fugitive: & <Nop>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/vim-fugitive/plugin/fugitive.vim line 718
+n  <Plug>fugitive:y<C-G> & :<C-U>call setreg(v:register, fugitive#Object(@%))<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/vim-fugitive/plugin/fugitive.vim line 717
+n  <Plug>PlenaryTestFile * :lua require('plenary.test_harness').test_directory(vim.fn.expand("%:p"))<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim line 9
+s  <Plug>luasnip-jump-prev * <Cmd>lua require'luasnip'.jump(-1)<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim line 19
+s  <Plug>luasnip-jump-next * <Cmd>lua require'luasnip'.jump(1)<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim line 18
+s  <Plug>luasnip-prev-choice * <Cmd>lua require'luasnip'.change_choice(-1)<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim line 17
+s  <Plug>luasnip-next-choice * <Cmd>lua require'luasnip'.change_choice(1)<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim line 16
+s  <Plug>luasnip-expand-snippet * <Cmd>lua require'luasnip'.expand()<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim line 15
+s  <Plug>luasnip-expand-or-jump * <Cmd>lua require'luasnip'.expand_or_jump()<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim line 14
+   <Plug>luasnip-expand-repeat * <Cmd>lua require'luasnip'.expand_repeat()<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim line 11
+   <Plug>luasnip-delete-check * <Cmd>lua require'luasnip'.unlink_current_if_deleted()<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim line 8
+x  <Plug>NetrwBrowseXVis * :<C-U>call netrw#BrowseXVis()<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/plugin/netrwPlugin.vim line 90
+n  <Plug>NetrwBrowseX * :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/plugin/netrwPlugin.vim line 84
+x  <Plug>(MatchitVisualTextObject)   <Plug>(MatchitVisualMultiBackward)o<Plug>(MatchitVisualMultiForward)
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 66
+o  <Plug>(MatchitOperationMultiForward) * :<C-U>call matchit#MultiMatch("W",  "o")<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 63
+o  <Plug>(MatchitOperationMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "o")<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 62
+x  <Plug>(MatchitVisualMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>m'gv``
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 61
+x  <Plug>(MatchitVisualMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>m'gv``
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 60
+n  <Plug>(MatchitNormalMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 59
+n  <Plug>(MatchitNormalMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 58
+o  <Plug>(MatchitOperationBackward) * :<C-U>call matchit#Match_wrapper('',0,'o')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 55
+o  <Plug>(MatchitOperationForward) * :<C-U>call matchit#Match_wrapper('',1,'o')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 54
+x  <Plug>(MatchitVisualBackward) * :<C-U>call matchit#Match_wrapper('',0,'v')<CR>m'gv``
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 53
+x  <Plug>(MatchitVisualForward) * :<C-U>call matchit#Match_wrapper('',1,'v')<CR>:if col("''") != col("$") | exe ":normal! m'" | endif<CR>gv``
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 51
+n  <Plug>(MatchitNormalBackward) * :<C-U>call matchit#Match_wrapper('',0,'n')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 50
+n  <Plug>(MatchitNormalForward) * :<C-U>call matchit#Match_wrapper('',1,'n')<CR>
+	Last set from /usr/local/Cellar/neovim/0.7.2/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 49
