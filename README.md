@@ -165,3 +165,23 @@ Remember that types that implement the `Copy` trait can be copied as they are
 types with known sizes at compile time so they live on the stack. If the User
 struct only had fields with types that implemented `Copy` then we could still
 access `user1` after the copy. 
+
+## Enums
+
+```rust 
+
+struct Ipv4Addr {
+    // --snip--
+}
+
+struct Ipv6Addr {
+    // --snip--
+}
+
+# Enums can embed structs
+enum IpAddr {
+    V4(Ipv4Addr),
+    V6(Ipv6Addr),
+}
+
+```
