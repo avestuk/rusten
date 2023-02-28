@@ -17,8 +17,7 @@ fn main() {
 
     let mut greeting_file = greeting_file_result.unwrap_or_else(|error| {
         if error.kind() == std::io::ErrorKind::NotFound {
-            File::create("hello.txt")
-                .unwrap_or_else(|error| panic!("Problem creating file, {:?}", error))
+            File::create("hello.txt").expect("Problem creating file")
         } else {
             panic!("failed to read file: {:?}", error)
         }
@@ -27,7 +26,7 @@ fn main() {
     let mut contents = String::new();
     greeting_file
         .read_to_string(&mut contents)
-        .unwrap_or_else(|error| panic!("Failed to read file: {:?}", error));
+        .expect("Failed to read file: ");
 
     println!("File already exists, contents: {contents}");
 
