@@ -15,25 +15,42 @@ fn main() {
         .create(true)
         .open("hello.txt");
 
-    let mut greeting_file = match greeting_file_result {
-        Ok(mut file) => {
-            let mut contents = String::new();
-            match file.read_to_string(&mut contents) {
-                Ok(_) => println!("File already exists, contents: {contents}"),
-                Err(e) => panic!("Failed to read file: {:?}", e),
-            }
-            file
+    let mut greeting_file = greeting_file_result.unwrap_or_else(|error| {
+        if error.kind() == std::io::ErrorKind::NotFound {
+            File::create("hello.txt")
+                .unwrap_or_else(|error| panic!("Problem creating file, {:?}", error))
+        } else {
+            panic!("failed to read file: {:?}", error)
         }
-        Err(error) => match error.kind() {
-            std::io::ErrorKind::NotFound => match File::create("hello.txt") {
-                Ok(fc) => fc,
-                Err(e) => panic!("Problem creating the file: {:?}", e),
-            },
-            other_error => {
-                panic!("Problem opening the file: {:?}", other_error)
-            }
-        },
-    };
+    });
+
+    let mut contents = String::new();
+    greeting_file
+        .read_to_string(&mut contents)
+        .unwrap_or_else(|error| panic!("Failed to read file: {:?}", error));
+
+    println!("File already exists, contents: {contents}");
+
+    // Using closures as above can mae the logic much neater
+    // let mut greeting_file = match greeting_file_result {
+    //     Ok(mut file) => {
+    //         let mut contents = String::new();
+    //         match file.read_to_string(&mut contents) {
+    //             Ok(_) => println!("File already exists, contents: {contents}"),
+    //             Err(e) => panic!("Failed to read file: {:?}", e),
+    //         }
+    //         file
+    //     }
+    //     Err(error) => match error.kind() {
+    //         std::io::ErrorKind::NotFound => match File::create("hello.txt") {
+    //             Ok(fc) => fc,
+    //             Err(e) => panic!("Problem creating the file: {:?}", e),
+    //         },
+    //         other_error => {
+    //             panic!("Problem opening the file: {:?}", other_error)
+    //         }
+    //     },
+    // };
 
     match greeting_file.write_all(String::from("hello m9").as_bytes()) {
         Ok(_) => println!("Wrote stuff"),
