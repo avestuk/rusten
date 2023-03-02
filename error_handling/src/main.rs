@@ -1,5 +1,5 @@
 use std::{
-    fs::{File, OpenOptions},
+    fs::{read_to_string, File, OpenOptions},
     io::{Read, Write},
 };
 
@@ -55,4 +55,12 @@ fn main() {
         Ok(_) => println!("Wrote stuff"),
         Err(error) => panic!("Failed to write: {:?}", error),
     };
+
+    let k = fs::read_to_string();
+}
+
+fn read_from_file(file: &String) -> Result<String, std::io::Error> {
+    let mut file_contents = String::new();
+    File::open(file)?.read_to_string(&mut file_contents)?;
+    Ok(file_contents)
 }
