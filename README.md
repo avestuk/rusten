@@ -149,6 +149,7 @@ fn build_user(email: String, username: String) -> User {
 }
 
 # Create structs from other structs and override only specific fields. 
+# This is known as the update syntax
 let user2 = User {
         email: String::from("another@example.com"),
         ..user1
@@ -185,3 +186,19 @@ enum IpAddr {
 }
 
 ```
+
+## Packages, Crates and Modules 
+
+A package is one or more crates. The `Cargo.toml` file contained by a package
+defines how to build those crates. 
+
+Crates are composed of modules. 
+Crates come in two flavours; `binary` and `library`
+
+* Binary crates are programs that compile to an executable that is run. 
+* Library crates are don't have a `main` function and don't compile to an executable.
+Instead they provide shareable functionality.
+
+A package can contain many binary crates, but only a single library crate. 
+A package can have multiple binary crates by placing files in the src/bin
+directory: each file will be a separate binary crate.
